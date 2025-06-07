@@ -1,0 +1,76 @@
+/* Enhanced Mouse Follower Effects */
+
+/* Button hover effect - pulse animation */
+.mf-cursor.-active:before {
+  animation: cursor-pulse 1s infinite alternate;
+}
+
+@keyframes cursor-pulse {
+  0% {
+    transform: scale(0.15);
+  }
+  100% {
+    transform: scale(0.2);
+  }
+}
+
+/* Magnetic effect - add slight glow */
+.mf-cursor.-magnetic:before {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
+  mix-blend-mode: difference;
+}
+
+/* Custom color effects */
+.mf-cursor.-primary:before {
+  background-color: var(--primary-color, #3b82f6);
+}
+
+.mf-cursor.-success:before {
+  background-color: var(--success-color, #10b981);
+}
+
+.mf-cursor.-warning:before {
+  background-color: var(--warning-color, #f59e0b);
+}
+
+.mf-cursor.-danger:before {
+  background-color: var(--danger-color, #ef4444);
+}
+
+/* Dot effect - smaller cursor */
+.mf-cursor.-dot:before {
+  transform: scale(0.08);
+}
+
+/* Plus effect - special cursor */
+.mf-cursor.-plus:before {
+  transform: scale(0);
+}
+
+.mf-cursor.-plus .mf-cursor-text:before {
+  content: "+";
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.mf-cursor.-plus .mf-cursor-text {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Image preview mode - smoother transition */
+.mf-cursor.-media .mf-cursor-media-box {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Text effect enhancements */
+.mf-cursor.-text .mf-cursor-text {
+  font-family: var(--font-geist-sans, sans-serif);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
