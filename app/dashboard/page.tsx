@@ -1,6 +1,4 @@
 
-import { MouseFollowerDemo } from "@/components/mouse-follower-demo";
-
 export default function Page() {
   return (
     <div className="flex flex-1 flex-col gap-8 p-4 pt-0">
@@ -12,7 +10,7 @@ export default function Page() {
         </p>
       </div>
       
-      <MouseFollowerDemo />
+      
       
       <div className="mt-8 text-center text-sm text-gray-500">
         <p>

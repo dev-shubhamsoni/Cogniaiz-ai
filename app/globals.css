@@ -1,12 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "../styles/mouse-follower.css";
-@import "../styles/mouse-follower-enhanced.css";
-
-body, html {
-  width: 100%;
-  height: 100vh;
-}
 
 @custom-variant dark (&:is(.dark *));
 
